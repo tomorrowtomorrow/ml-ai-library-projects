@@ -76,6 +76,8 @@ All implementations are verified against NumPy:
 
 ```python
 assert np.allclose(dot_matrix(A, B), A @ B)
+```
+
 ### 3️⃣ Matrix Properties (Planned / In Progress)
 - Transpose
 - Determinant
@@ -88,3 +90,4 @@ assert np.allclose(dot_matrix(A, B), A @ B)
 - QR Decomposition
 - Eigenvalues & Eigenvectors
 - Singular Value Decomposition (SVD)
+
