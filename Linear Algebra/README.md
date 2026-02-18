@@ -64,9 +64,21 @@ C[i][j] = dot(row_i_of_A, column_j_of_B)
 - Used in linear transformations
 - Foundation of most ML algorithms
 
-**Implementation**
+## ⚙️ Example Usage
 
-`dot_matrix(matrix1, matrix2)`
+```python
+import numpy as np
+from linear_algebra import dot_matrix
+
+A = np.array([[1, 2],
+              [3, 4]])
+
+B = np.array([[5, 6],
+              [7, 8]])
+
+result = dot_matrix(A, B)
+print(result)
+```
 
 ---
 
@@ -90,4 +102,5 @@ assert np.allclose(dot_matrix(A, B), A @ B)
 - QR Decomposition
 - Eigenvalues & Eigenvectors
 - Singular Value Decomposition (SVD)
+
 
