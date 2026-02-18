@@ -2,48 +2,48 @@
 
 This module contains from-scratch implementations of core linear algebra concepts used in machine learning.
 
-The goal of this section is not to replace NumPy, but to deeply understand the mathematical operations that power neural networks, optimization algorithms, and data transformations.
-
 ---
 
 ## 🎯 Purpose
 
 - Build mathematical intuition
 - Implement core operations manually
-- Understand computational complexity
 - Connect linear algebra to ML systems
 
 ---
 
 ## 📚 Implemented Components
 
-### 1️⃣ Vector Operations
-- Dot product
-- Vector norms
-- Basic vector utilities
+---
 
-### 2️⃣ Matrix Operations
-- Row extraction
-- Column extraction
-- Matrix multiplication (manual implementation)
-- Shape validation
+### 1️⃣ Dot Product
 
-### 3️⃣ Matrix Properties (Planned / In Progress)
-- Transpose
-- Determinant
-- Inverse
-- Rank
-- Trace
+**Mathematical Definition**
 
-### 4️⃣ Decompositions (Planned)
-- LU Decomposition
-- QR Decomposition
-- Eigenvalues & Eigenvectors
-- Singular Value Decomposition (SVD)
+For two vectors:
+
+u = (u₁, u₂, ..., uₙ)  
+v = (v₁, v₂, ..., vₙ)
+
+The dot product is:
+
+u · v = Σ (uᵢ vᵢ)
+
+**Why It Matters**
+
+- Measures similarity between vectors
+- Core operation in matrix multiplication
+- Used in neural network computations
+
+**Implementation**
+
+`dot(matrix1, matrix2, r, c)`
 
 ---
 
-## 🧠 Mathematical Foundation
+### 2️⃣ Matrix Multiplication
+
+**Mathematical Definition**
 
 If:
 
@@ -58,26 +58,33 @@ Each element is computed as:
 
 C[i][j] = dot(row_i_of_A, column_j_of_B)
 
-Understanding this operation is essential for:
+**Why It Matters**
 
-- Linear transformations
-- Neural network forward propagation
-- Gradient computation
-- Optimization methods
+- Core of neural network layers
+- Used in linear transformations
+- Foundation of most ML algorithms
+
+**Implementation**
+
+`dot_matrix(matrix1, matrix2)`
 
 ---
 
-## ⚙️ Example Usage
+## 🧪 Validation
+
+All implementations are verified against NumPy:
 
 ```python
-import numpy as np
-from linear_algebra import dot_matrix
+assert np.allclose(dot_matrix(A, B), A @ B)
+### 3️⃣ Matrix Properties (Planned / In Progress)
+- Transpose
+- Determinant
+- Inverse
+- Rank
+- Trace
 
-A = np.array([[1, 2],
-              [3, 4]])
-
-B = np.array([[5, 6],
-              [7, 8]])
-
-result = dot_matrix(A, B)
-print(result)
+### 4️⃣ Decompositions (Planned)
+- LU Decomposition
+- QR Decomposition
+- Eigenvalues & Eigenvectors
+- Singular Value Decomposition (SVD)
