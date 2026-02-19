@@ -20,10 +20,7 @@ class LINKED_LIST:
 
 
 
-test = LINKED_LIST()
-test.add(12)
-test.add(13)
-test.add(14)
+
 
 
 
