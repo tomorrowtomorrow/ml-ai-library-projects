@@ -36,5 +36,20 @@ def dot_matrix(matrix1,matrix2,target):
     return target
 
           
-print(dot_matrix(a,b,c))         
-print(a@b)
+class vector:
+     
+    def __init__(self,vec):
+        self.vec=np.array(vec)
+
+class vec_mul:
+    def __init__(self):
+        pass
+
+
+    def add(self,vec1,vec2):
+        r1,c1=vec1.vec.shape()
+        r2,c2=vec2.vec.shape()
+        
+        
+
+        
