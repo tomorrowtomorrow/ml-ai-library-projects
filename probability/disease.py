@@ -42,6 +42,5 @@ def simulate_bayes(population, prevalence, sensitivity, specificity):
     return theory,empirical_result    
 
  
-
-       
+     
 
