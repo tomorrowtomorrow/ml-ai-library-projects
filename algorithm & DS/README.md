@@ -1,96 +1,102 @@
+# 📝 Linked List Project
 
-# Algorithms & Data Structures
+## Project Overview
 
-This module contains foundational data structures and algorithm implementations built from scratch as part of my journey toward developing AI/ML systems at a low level.
+This is a **singly linked list implementation in Python**.
+It covers the core operations of linked lists, including adding, deleting, and searching nodes.
 
-The goal is not just usage, but deep understanding of how core computational structures work internally.
-
----
-
-## 📦 Current Implementations
-
-### 🔗 Linked List (Custom Implementation)
-
-A fully implemented singly linked list built from scratch using OOP principles.
-
-Features:
-
-* Node abstraction (`data`, `next`)
-* Dynamic append operation
-* Manual pointer traversal
-* Clean separation between `Node` and `LinkedList`
-* Explicit reference management (no built-in Python list usage)
-
-Purpose:
-
-* Understand memory references
-* Practice pointer-style traversal
-* Strengthen algorithmic reasoning
-* Prepare for tree and graph structures
+This project is designed as a **learning tool** for foundational data structures and algorithms. It is fully modular and can be extended into more advanced structures like hash tables, stacks, queues, and LRU caches.
 
 ---
 
-## 🧠 Why This Matters for ML/AI
+## 🚀 Features Implemented
 
-Data structures are the backbone of:
-
-* Graph-based models
-* Optimization algorithms
-* Computational graph engines
-* Custom tensor operations
-* Memory-efficient pipelines
-
-Building them manually improves:
-
-* Time complexity intuition
-* Memory model understanding
-* Structural thinking
+* Add node at **end** → `add(data)`
+* Add node at **front/head** → `add_f(data)`
+* Add node at a **specific index** → `add_at(index, data)`
+* Delete **first node** → `del_first()`
+* Delete **last node** → `del_last()`
+* Delete node at **specific index** → `del_at(index)`
+* **Search** for a node → `search(data)`
+* **Print** the linked list → `PRINT()`
+* **Check if list is empty** → `IS_EMPTY()`
 
 ---
 
-## 🛠 Design Philosophy
+## 📦 Node Class
 
-* Implement from scratch (no shortcuts)
-* Focus on clarity over micro-optimization
-* Prioritize learning and correctness
-* Build reusable foundations for future ML modules
+* `node` class contains:
 
----
-
-## 🚀 TODO / Roadmap
-
-### Data Structures
-
-* [ ] Add `prepend()` method
-* [ ] Add `delete(value)` with full edge-case handling
-* [ ] Implement `reverse()`
-* [ ] Add iterable support (`__iter__`)
-* [ ] Implement stack and queue structures
-* [ ] Implement binary search tree
-* [ ] Graph structure (adjacency list)
-
-### Algorithms
-
-* [ ] Sorting algorithms (merge sort, quick sort)
-* [ ] Binary search
-* [ ] Recursion patterns
-* [ ] Depth-First Search (DFS)
-* [ ] Breadth-First Search (BFS)
-* [ ] Basic dynamic programming examples
-
-### Performance
-
-* [ ] Add time complexity documentation
-* [ ] Benchmark against Python built-ins
-* [ ] Add test suite
+  * `data` → value of the node
+  * `next` → pointer to the next node
 
 ---
 
-## 🎯 Long-Term Vision
+## 🔧 Usage Example
 
-This module will serve as the structural foundation for:
+```python
+from linked_list import LINKED_LIST
 
-* Custom numerical libraries
-* Optimization routines
-* Neural network implementations
-* ML systems built fully from scratch
+# Initialize list
+ll = LINKED_LIST()
+
+# Add nodes
+ll.add(10)
+ll.add(20)
+ll.add_f(5)
+ll.add_at(2, 15)  # Insert 15 at index 2
+
+# Print list
+ll.PRINT()  # Output: [5][.] -> [15][.] -> [10][.] -> [20][.] -> None
+
+# Delete nodes
+ll.del_first()
+ll.del_last()
+ll.del_at(2)
+
+# Search
+ll.search(10)
+```
+
+---
+
+## 📊 Planned Documentation
+
+* [ ] **Time Complexity Analysis**
+
+  * `add` →
+  * `add_f` →
+  * `add_at` →
+  * `del_first` →
+  * `del_last` →
+  * `del_at` →
+  * `search` →
+* [ ] **Space Complexity Analysis**
+* [ ] **Edge Case Handling Documentation**
+
+  * Empty list
+  * Single-node list
+  * Out-of-range indexes
+
+---
+
+## 🛠️ TODO / Future Enhancements
+
+* Implement **doubly linked list** for backward traversal.
+* Add **circular linked list** option.
+* Convert list into **hash table** (chaining method).
+* Build **stack** and **queue** using linked list.
+* Add **visualization** of the list structure in ASCII or Matplotlib.
+* Add **unit tests** to ensure stability.
+* Optimize `add_at` and `del_at` for better readability.
+* Write **full documentation for each function** (inputs, outputs, exceptions).
+
+---
+
+## 📚 Notes
+
+* This project is a **foundation project** for learning data structures.
+* Can be extended for **more advanced projects**, such as hash tables, caches, or graph adjacency lists.
+* All operations assume **1-based indexing** for easier understanding.
+
+---
